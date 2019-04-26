@@ -1,6 +1,5 @@
 /*
  * calibrate.c
- *
  *  Copyright (C) 2019 Alex Tsanis
  *
  * This program is free software; you can redistribute it and/or modify
