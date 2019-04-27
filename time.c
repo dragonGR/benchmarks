@@ -10,14 +10,12 @@
 #include <stdio.h>
 #include <time.h>
 
-int main ()
+int main(void)
 {
-  time_t rawtime;
-  struct tm * timeinfo;
+    time_t mytime = time(NULL);
+    char * time_str = ctime(&mytime);
+    time_str[strlen(time_str)-1] = '\0';
+    printf("Current Time : %s\n", time_str);
 
-  time (&rawtime);
-  timeinfo = localtime (&rawtime);
-  printf ("%s", asctime (timeinfo));
-
-  return 0;
+    return 0;
 }
