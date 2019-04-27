@@ -9,9 +9,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include"kmeans.h"
-#include"point.h"
-#include"hashmap.h"
+#include "kmeans.h"
+#include "point.h"
+#include "hashmap.h"
 
 int n = 10;
 int iters = 15;

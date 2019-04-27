@@ -9,9 +9,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include"hashmap.h"
-#include<string.h>
+#include <string.h>
 #include <glib.h>
+#include "hashmap.h"
 
 GHashTable* hash = NULL;
 

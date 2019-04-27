@@ -10,8 +10,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include"point.h"
-#include"hashmap.h"
+#include "point.h"
+#include "hashmap.h"
 
 #include <string.h>
 #include <jansson.h>

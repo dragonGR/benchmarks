@@ -10,7 +10,7 @@
 #ifndef KMEANS_H_INCLUDED
 #define KMEANS_H_INCLUDED
 
-#include"point.h"
+#include "point.h"
 
 typedef struct {
     long size;

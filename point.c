@@ -7,8 +7,8 @@
  * published by the Free Software Foundation.
  */
 
-#include<math.h>
-#include"point.h"
+#include <math.h>
+#include "point.h"
 
 #include <stdlib.h>
 #include <stdio.h>
