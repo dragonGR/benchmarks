@@ -7,7 +7,6 @@
  * published by the Free Software Foundation.
  */
 
-
 #define NSEC 		(1000000000)
 #define MSEC2NSEC	(1000000)
 #define CAL_LOOP	(100000000)
