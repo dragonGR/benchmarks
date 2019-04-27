@@ -39,12 +39,12 @@ void calibrate()
 
 	nsecs = (ts_end.tv_sec - ts_start.tv_sec) * NSEC +
 		(ts_end.tv_nsec - ts_start.tv_nsec);
-	printf("nsec = %u\n", nsecs);
+	printf("nsec = %zu\n", nsecs);
 
 	/* find the counter for 10ms */
 	cnt = i * (10 * MSEC2NSEC) / nsecs;
 
-	printf("cnt: %u\n", cnt);
+	printf("cnt: %zu\n", cnt);
 }
 
 int main(void)
