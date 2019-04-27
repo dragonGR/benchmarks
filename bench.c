@@ -22,7 +22,9 @@
 #include <inttypes.h>
 #include <unistd.h>
 #include <sched.h>
+#include <err.h>
 #include <errno.h>
+#include <stdlib.h>
 
 char *prname;
 unsigned long cnt, nsecs, iter, sleep_time;
@@ -72,13 +74,13 @@ void benchmark()
 
 	for (i = 0; i < iter; i++) {
 		if (!quiet)
-			printf("Iteration %u, ", i);
+			printf("Iteration %zu, ", i);
 
 		bt = do_bench();
 		total += bt;
 
 		if (!quiet)
-			printf("Elapsed time: %u usecs\n", bt);
+			printf("Elapsed time: %zu usecs\n", bt);
 
 		n_sleep(sleep_time);
 	}
@@ -88,8 +90,8 @@ void benchmark()
 	sec = ts_total_end.tv_sec - ts_total_start.tv_sec;
 	msec = (ts_total_end.tv_nsec - ts_total_start.tv_nsec) / MSEC2NSEC;
 
-	printf("Average time: %u\n", total);
-	printf("Total elapsed time: %u.%u\n", sec, msec);
+	printf("Average time: %zu\n", total);
+	printf("Total elapsed time: %zu.%zu\n", sec, msec);
 }
 
 void usage()
@@ -137,7 +139,7 @@ int main(int argc, char **argv)
 	sched_setaffinity(0, sizeof(mask), &mask);
 
 	printf("Starting benchmark\n");
-	printf("cnt = %u, iter = %u, sleep = %u\n\n", cnt, iter, sleep_time);
+	printf("cnt = %zu, iter = %zu, sleep = %zu\n\n", cnt, iter, sleep_time);
 
 	benchmark();
 
